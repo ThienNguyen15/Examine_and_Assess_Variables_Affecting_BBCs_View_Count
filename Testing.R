@@ -2,7 +2,7 @@ library("ggplot2")
 library("car")
 library("dplyr")
 library("readr")
-youtube<-read.csv('C:\\Users\\thien\\OneDrive\\Máy tính\\BTL XSTK\\bbc.csv')
+youtube<-read.csv('C:\\thien\\bbc.csv')
 youtube["licensed_content"][is.na(youtube["licensed_content"])]<- 0
 youtube <-(youtube [, c(9,11,13,15,16,17,18,20)])
 sum(is.na(youtube))
@@ -68,4 +68,5 @@ kruskal.test(view ~ licensed, data = youtube)
 #epsilonSquared ( x = youtube$view, g = youtube$licensed)
 #install.packages("FSA")
 #library (FSA)
+
 #dunnTest(view ~ def, data = youtube, method="bonferroni") error
